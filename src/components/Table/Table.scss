@@ -54,7 +54,7 @@ table {
     }
 
     &:nth-of-type(even) {
-      background: $yellow;
+      background: rgba($color: $yellow, $alpha: 0.1);
       &:hover {
         background-color: lighten($color: $dark-bg, $amount: 10);
       }

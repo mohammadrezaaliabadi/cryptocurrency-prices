@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Table from "../Table/Table";
 import Row from "../Row/Row";
+import { KEY, maxPerPage, URL } from "../../config/config";
 
 function App() {
   const [data, setData] = useState([]);
+  const [page, pageNumber] = useState(2);
   const formatLocale = {
     locale: navigator.language,
     currency: "USD",
@@ -13,10 +15,7 @@ function App() {
 
   const getData = () => {
     axios
-      .get(
-        "https://api.nomics.com/v1/currencies/ticker?&per-page=100&page=1&key=" +
-          "bc281b24f1951347de7e1c4b54ee193e5dbb6c0c"
-      )
+      .get(`${URL}?&per-page=${maxPerPage}&page=${page}&key=${KEY}`)
       .then((resp) => {
         setData(resp.data);
       })
