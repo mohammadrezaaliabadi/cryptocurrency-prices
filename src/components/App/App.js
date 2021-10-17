@@ -1,32 +1,17 @@
 import "./App.scss";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import Table from "../Table/Table";
 import Row from "../Row/Row";
-import { KEY, maxPerPage, URL } from "../../config/config";
+import usePagination from "../Pagination/usePagination";
+import Pagination from "../Pagination/Pagination";
 
 function App() {
   const [data, setData] = useState([]);
-  const [page, pageNumber] = useState(2);
-  const formatLocale = {
-    locale: navigator.language,
-    currency: "USD",
-  };
-
-  const getData = () => {
-    axios
-      .get(`${URL}?&per-page=${maxPerPage}&page=${page}&key=${KEY}`)
-      .then((resp) => {
-        setData(resp.data);
-      })
-      .catch((err) => {
-        console.log("Error fetching data from nomics", err);
-      });
-  };
-
   const headerTable = ["NAME", "PRICE", "1D CHANGE", "VOLUME", "MARKET CAP"];
-  useEffect(() => {
-    getData();
+  const DATA = usePagination(setData);
+
+  useEffect(async () => {
+    await DATA.currentData();
   }, []);
   return (
     <div className="App">
@@ -39,7 +24,15 @@ function App() {
         rowMap={(x) => <Row rowData={x} />}
       />
       <div className="footer">
-        <h4>This is footer.</h4>
+        <Pagination
+          count={10}
+          onChange={(i) => {
+            console.log(i);
+            DATA.jump(i);
+          }}
+          prev={DATA.next}
+          next={DATA.prev}
+        />
       </div>
     </div>
   );
