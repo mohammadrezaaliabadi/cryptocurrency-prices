@@ -2,6 +2,7 @@ import "./App.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Table from "../Table/Table";
+import Row from "../Row/Row";
 
 function App() {
   const [data, setData] = useState([]);
@@ -33,7 +34,11 @@ function App() {
       <div className="header">
         <h1>Crypto price</h1>
       </div>
-      <Table data={data} header={headerTable} firstRowClassName="first-row" />
+      <Table
+        data={data}
+        header={headerTable}
+        rowMap={(x) => <Row rowData={x} />}
+      />
       <div className="footer">
         <h4>This is footer.</h4>
       </div>
