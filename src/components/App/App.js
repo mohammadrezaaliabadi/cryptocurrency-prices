@@ -21,13 +21,12 @@ function App() {
       <Table
         data={data}
         header={headerTable}
-        rowMap={(x) => <Row rowData={x} />}
+        rowMap={(x) => <Row key={x.id} rowData={x} />}
       />
       <div className="footer">
         <Pagination
           count={10}
           onChange={(i) => {
-            console.log(i);
             DATA.jump(i);
           }}
           prev={DATA.next}

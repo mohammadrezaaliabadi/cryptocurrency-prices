@@ -6,7 +6,7 @@ import {
 
 const Row = ({ rowData }) => {
   return (
-    <tr key={rowData.id} className="table-row">
+    <tr className="table-row">
       <td className="first-column">
         <img
           srcSet={rowData.logo_url}
