@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useCallback, useEffect } from "react/cjs/react.development";
-import { getPerPageData } from "../../api/api";
-import { maxPerPage } from "../../config/config";
+import { getPerPageData } from "../api/api";
+import { maxPerPage } from "../config/config";
 
 const usePagination = (setData, intervalObject) => {
   const [currentPage, setCurrentPage] = useState(1);

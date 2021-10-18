@@ -2,10 +2,10 @@ import "./App.scss";
 import { useCallback, useState } from "react";
 import Table from "../Table/Table";
 import Row from "../Row/Row";
-import usePagination from "../Pagination/usePagination";
 import Pagination from "../Pagination/Pagination";
 import SearchBar from "../SeaachBar/SerachBar";
 import { getDataByIds } from "../../api/api";
+import usePagination from "../../hooks/usePagination";
 
 function App() {
   const [data, setData] = useState([]);
@@ -13,7 +13,6 @@ function App() {
   const [searchValue, setSearchValue] = useState("");
   const [intervalId, setIntervalId] = useState();
   const DATA = usePagination(setData, { intervalId, setIntervalId });
-
   const submitHandler = useCallback(
     async (e) => {
       e.preventDefault();
