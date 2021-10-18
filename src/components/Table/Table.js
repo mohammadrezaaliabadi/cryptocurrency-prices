@@ -9,6 +9,7 @@ const Table = ({ data, header, rowMap }) => {
             <table className="table">
               <thead>
                 <tr className="table-head">
+                  <td style={{ width: "1.5rem" }}>#</td>
                   {header.map((head) => (
                     <td key={`head-${head}`}>{head}</td>
                   ))}

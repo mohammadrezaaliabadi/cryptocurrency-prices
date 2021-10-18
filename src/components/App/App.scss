@@ -28,3 +28,9 @@ body {
   @extend %center-box;
   margin: 2rem;
 }
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}

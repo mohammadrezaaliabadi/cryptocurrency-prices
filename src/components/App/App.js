@@ -1,27 +1,61 @@
 import "./App.scss";
-import { useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import Table from "../Table/Table";
 import Row from "../Row/Row";
 import usePagination from "../Pagination/usePagination";
 import Pagination from "../Pagination/Pagination";
+import SearchBar from "../SeaachBar/SerachBar";
+import { getDataByIds } from "../../api/api";
 
 function App() {
   const [data, setData] = useState([]);
   const headerTable = ["NAME", "PRICE", "1D CHANGE", "VOLUME", "MARKET CAP"];
-  const DATA = usePagination(setData);
+  const [searchValue, setSearchValue] = useState("");
+  const [intervalId, setIntervalId] = useState();
+  const DATA = usePagination(setData, { intervalId, setIntervalId });
 
-  useEffect(async () => {
-    await DATA.currentData();
-  }, []);
+  const submitHandler = useCallback(
+    async (e) => {
+      e.preventDefault();
+      clearInterval(intervalId);
+      setData(await getDataByIds(searchValue));
+      setIntervalId(
+        setInterval(async () => {
+          setData(await getDataByIds(searchValue));
+        }, 10000)
+      );
+    },
+    [intervalId, searchValue]
+  );
+
+  const searchChangeInputHandler = useCallback(
+    (event) => {
+      setSearchValue(event.target.value);
+    },
+    [searchValue]
+  );
+
   return (
     <div className="App">
       <div className="header">
-        <h1>Crypto price</h1>
+        <h1
+          style={{ cursor: "pointer" }}
+          onClick={async () => {
+            await DATA.currentData();
+          }}
+        >
+          Crypto prices
+        </h1>
+        <SearchBar
+          search={{ searchValue: searchValue, setSearchValue: setSearchValue }}
+          submitHandler={submitHandler}
+          searchChangeInputHandler={searchChangeInputHandler}
+        />
       </div>
       <Table
         data={data}
         header={headerTable}
-        rowMap={(x) => <Row key={x.id} rowData={x} />}
+        rowMap={(x, i) => <Row key={x.id} i={i} rowData={x} />}
       />
       <div className="footer">
         <Pagination
@@ -29,8 +63,8 @@ function App() {
           onChange={(i) => {
             DATA.jump(i);
           }}
-          prev={DATA.next}
-          next={DATA.prev}
+          prev={DATA.prev}
+          next={DATA.next}
         />
       </div>
     </div>

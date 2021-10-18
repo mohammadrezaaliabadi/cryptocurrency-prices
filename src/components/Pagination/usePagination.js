@@ -1,16 +1,23 @@
 import { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+import { useCallback, useEffect } from "react/cjs/react.development";
 import { getPerPageData } from "../../api/api";
 import { maxPerPage } from "../../config/config";
 
-const usePagination = (setData) => {
+const usePagination = (setData, intervalObject) => {
   const [currentPage, setCurrentPage] = useState(1);
+
   const maxPage = maxPerPage;
-  const currentData = async () => {
+  const currentData = useCallback(async () => {
+    clearInterval(intervalObject.intervalId);
     setData(await getPerPageData(currentPage));
-  };
-  useEffect(() => {
-    currentData();
+    intervalObject?.setIntervalId(
+      setInterval(async () => {
+        setData(await getPerPageData(currentPage));
+      }, 10000)
+    );
+  }, [currentPage, intervalObject.intervalId]);
+  useEffect(async () => {
+    await currentData();
   }, [currentPage]);
 
   const next = () => {

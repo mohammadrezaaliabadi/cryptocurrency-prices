@@ -4,9 +4,10 @@ import {
   formatNumberCompact,
 } from "../../utils/utils";
 
-const Row = ({ rowData }) => {
+const Row = ({ rowData, i }) => {
   return (
     <tr className="table-row">
+      <td style={{ width: "1.8rem" }}>{i + 1}</td>
       <td className="first-column">
         <img
           srcSet={rowData.logo_url}
