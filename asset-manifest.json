@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/cryptocurrency-prices,/static/css/main.453cc35e.chunk.css",
-    "main.js": "/cryptocurrency-prices,/static/js/main.1aa1fde3.chunk.js",
-    "main.js.map": "/cryptocurrency-prices,/static/js/main.1aa1fde3.chunk.js.map",
-    "runtime-main.js": "/cryptocurrency-prices,/static/js/runtime-main.28046905.js",
-    "runtime-main.js.map": "/cryptocurrency-prices,/static/js/runtime-main.28046905.js.map",
-    "static/js/2.90ba1aa1.chunk.js": "/cryptocurrency-prices,/static/js/2.90ba1aa1.chunk.js",
-    "static/js/2.90ba1aa1.chunk.js.map": "/cryptocurrency-prices,/static/js/2.90ba1aa1.chunk.js.map",
-    "static/js/3.8d210c81.chunk.js": "/cryptocurrency-prices,/static/js/3.8d210c81.chunk.js",
-    "static/js/3.8d210c81.chunk.js.map": "/cryptocurrency-prices,/static/js/3.8d210c81.chunk.js.map",
-    "index.html": "/cryptocurrency-prices,/index.html",
-    "static/css/main.453cc35e.chunk.css.map": "/cryptocurrency-prices,/static/css/main.453cc35e.chunk.css.map",
-    "static/js/2.90ba1aa1.chunk.js.LICENSE.txt": "/cryptocurrency-prices,/static/js/2.90ba1aa1.chunk.js.LICENSE.txt"
+    "main.css": "/cryptocurrency-prices/static/css/main.453cc35e.chunk.css",
+    "main.js": "/cryptocurrency-prices/static/js/main.1aa1fde3.chunk.js",
+    "main.js.map": "/cryptocurrency-prices/static/js/main.1aa1fde3.chunk.js.map",
+    "runtime-main.js": "/cryptocurrency-prices/static/js/runtime-main.f1e5088d.js",
+    "runtime-main.js.map": "/cryptocurrency-prices/static/js/runtime-main.f1e5088d.js.map",
+    "static/js/2.90ba1aa1.chunk.js": "/cryptocurrency-prices/static/js/2.90ba1aa1.chunk.js",
+    "static/js/2.90ba1aa1.chunk.js.map": "/cryptocurrency-prices/static/js/2.90ba1aa1.chunk.js.map",
+    "static/js/3.8d210c81.chunk.js": "/cryptocurrency-prices/static/js/3.8d210c81.chunk.js",
+    "static/js/3.8d210c81.chunk.js.map": "/cryptocurrency-prices/static/js/3.8d210c81.chunk.js.map",
+    "index.html": "/cryptocurrency-prices/index.html",
+    "static/css/main.453cc35e.chunk.css.map": "/cryptocurrency-prices/static/css/main.453cc35e.chunk.css.map",
+    "static/js/2.90ba1aa1.chunk.js.LICENSE.txt": "/cryptocurrency-prices/static/js/2.90ba1aa1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.28046905.js",
+    "static/js/runtime-main.f1e5088d.js",
     "static/js/2.90ba1aa1.chunk.js",
     "static/css/main.453cc35e.chunk.css",
     "static/js/main.1aa1fde3.chunk.js"
