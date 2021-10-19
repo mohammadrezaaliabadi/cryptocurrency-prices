@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.453cc35e.chunk.css",
-    "main.js": "/static/js/main.aa04b318.chunk.js",
-    "main.js.map": "/static/js/main.aa04b318.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.45db7298.js",
-    "runtime-main.js.map": "/static/js/runtime-main.45db7298.js.map",
-    "static/js/2.90ba1aa1.chunk.js": "/static/js/2.90ba1aa1.chunk.js",
-    "static/js/2.90ba1aa1.chunk.js.map": "/static/js/2.90ba1aa1.chunk.js.map",
-    "static/js/3.50685213.chunk.js": "/static/js/3.50685213.chunk.js",
-    "static/js/3.50685213.chunk.js.map": "/static/js/3.50685213.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.453cc35e.chunk.css.map": "/static/css/main.453cc35e.chunk.css.map",
-    "static/js/2.90ba1aa1.chunk.js.LICENSE.txt": "/static/js/2.90ba1aa1.chunk.js.LICENSE.txt"
+    "main.css": "/cryptocurrency-prices/static/css/main.453cc35e.chunk.css",
+    "main.js": "/cryptocurrency-prices/static/js/main.aa04b318.chunk.js",
+    "main.js.map": "/cryptocurrency-prices/static/js/main.aa04b318.chunk.js.map",
+    "runtime-main.js": "/cryptocurrency-prices/static/js/runtime-main.6072ea10.js",
+    "runtime-main.js.map": "/cryptocurrency-prices/static/js/runtime-main.6072ea10.js.map",
+    "static/js/2.90ba1aa1.chunk.js": "/cryptocurrency-prices/static/js/2.90ba1aa1.chunk.js",
+    "static/js/2.90ba1aa1.chunk.js.map": "/cryptocurrency-prices/static/js/2.90ba1aa1.chunk.js.map",
+    "static/js/3.50685213.chunk.js": "/cryptocurrency-prices/static/js/3.50685213.chunk.js",
+    "static/js/3.50685213.chunk.js.map": "/cryptocurrency-prices/static/js/3.50685213.chunk.js.map",
+    "index.html": "/cryptocurrency-prices/index.html",
+    "static/css/main.453cc35e.chunk.css.map": "/cryptocurrency-prices/static/css/main.453cc35e.chunk.css.map",
+    "static/js/2.90ba1aa1.chunk.js.LICENSE.txt": "/cryptocurrency-prices/static/js/2.90ba1aa1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.45db7298.js",
+    "static/js/runtime-main.6072ea10.js",
     "static/js/2.90ba1aa1.chunk.js",
     "static/css/main.453cc35e.chunk.css",
     "static/js/main.aa04b318.chunk.js"
