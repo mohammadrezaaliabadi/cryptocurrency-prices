@@ -6,6 +6,7 @@ import Pagination from "../Pagination/Pagination";
 import SearchBar from "../SeaachBar/SerachBar";
 import { getDataByIds } from "../../api/api";
 import usePagination from "../../hooks/usePagination";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState([]);
