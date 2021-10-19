@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/cryptocurrency-prices/static/css/main.453cc35e.chunk.css",
-    "main.js": "/cryptocurrency-prices/static/js/main.f5595d67.chunk.js",
-    "main.js.map": "/cryptocurrency-prices/static/js/main.f5595d67.chunk.js.map",
-    "runtime-main.js": "/cryptocurrency-prices/static/js/runtime-main.d80a2af1.js",
-    "runtime-main.js.map": "/cryptocurrency-prices/static/js/runtime-main.d80a2af1.js.map",
-    "static/js/2.8445fe21.chunk.js": "/cryptocurrency-prices/static/js/2.8445fe21.chunk.js",
-    "static/js/2.8445fe21.chunk.js.map": "/cryptocurrency-prices/static/js/2.8445fe21.chunk.js.map",
-    "static/js/3.1068bcff.chunk.js": "/cryptocurrency-prices/static/js/3.1068bcff.chunk.js",
-    "static/js/3.1068bcff.chunk.js.map": "/cryptocurrency-prices/static/js/3.1068bcff.chunk.js.map",
+    "main.js": "/cryptocurrency-prices/static/js/main.1aa1fde3.chunk.js",
+    "main.js.map": "/cryptocurrency-prices/static/js/main.1aa1fde3.chunk.js.map",
+    "runtime-main.js": "/cryptocurrency-prices/static/js/runtime-main.f1e5088d.js",
+    "runtime-main.js.map": "/cryptocurrency-prices/static/js/runtime-main.f1e5088d.js.map",
+    "static/js/2.90ba1aa1.chunk.js": "/cryptocurrency-prices/static/js/2.90ba1aa1.chunk.js",
+    "static/js/2.90ba1aa1.chunk.js.map": "/cryptocurrency-prices/static/js/2.90ba1aa1.chunk.js.map",
+    "static/js/3.8d210c81.chunk.js": "/cryptocurrency-prices/static/js/3.8d210c81.chunk.js",
+    "static/js/3.8d210c81.chunk.js.map": "/cryptocurrency-prices/static/js/3.8d210c81.chunk.js.map",
     "index.html": "/cryptocurrency-prices/index.html",
     "static/css/main.453cc35e.chunk.css.map": "/cryptocurrency-prices/static/css/main.453cc35e.chunk.css.map",
-    "static/js/2.8445fe21.chunk.js.LICENSE.txt": "/cryptocurrency-prices/static/js/2.8445fe21.chunk.js.LICENSE.txt"
+    "static/js/2.90ba1aa1.chunk.js.LICENSE.txt": "/cryptocurrency-prices/static/js/2.90ba1aa1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d80a2af1.js",
-    "static/js/2.8445fe21.chunk.js",
+    "static/js/runtime-main.f1e5088d.js",
+    "static/js/2.90ba1aa1.chunk.js",
     "static/css/main.453cc35e.chunk.css",
-    "static/js/main.f5595d67.chunk.js"
+    "static/js/main.1aa1fde3.chunk.js"
   ]
 }
