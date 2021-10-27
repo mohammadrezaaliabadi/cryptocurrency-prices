@@ -3,10 +3,9 @@ import { useCallback, useState } from "react";
 import Table from "../Table/Table";
 import Row from "../Row/Row";
 import Pagination from "../Pagination/Pagination";
-import SearchBar from "../SeaachBar/SerachBar";
+import SearchBar from "../SearchBar/SearchBar";
 import { getDataByIds } from "../../api/api";
 import usePagination from "../../hooks/usePagination";
-import { BrowserRouter } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState([]);
@@ -24,26 +23,26 @@ function App() {
           setData(await getDataByIds(searchValue));
         }, 10000)
       );
+      return () => clearInterval(intervalId);
     },
     [intervalId, searchValue]
   );
 
-  const searchChangeInputHandler = useCallback(
-    (event) => {
-      setSearchValue(event.target.value);
-    },
-    [searchValue]
-  );
+  const searchChangeInputHandler = useCallback((event) => {
+    setSearchValue(event.target.value);
+  }, []);
+  const handleOnChangePaginaion = (i) => {
+    DATA.jump(i);
+  };
+  const rowMapTable = (x, i) => <Row key={x.id} i={i} rowData={x} />;
 
+  const handleClickH1 = () => {
+    DATA.reset();
+  };
   return (
     <div className="App">
       <div className="header">
-        <h1
-          style={{ cursor: "pointer" }}
-          onClick={async () => {
-            await DATA.currentData();
-          }}
-        >
+        <h1 style={{ cursor: "pointer" }} onClick={handleClickH1}>
           Crypto prices
         </h1>
         <SearchBar
@@ -52,17 +51,11 @@ function App() {
           searchChangeInputHandler={searchChangeInputHandler}
         />
       </div>
-      <Table
-        data={data}
-        header={headerTable}
-        rowMap={(x, i) => <Row key={x.id} i={i} rowData={x} />}
-      />
+      <Table data={data} header={headerTable} rowMap={rowMapTable} />
       <div className="footer">
         <Pagination
           count={10}
-          onChange={(i) => {
-            DATA.jump(i);
-          }}
+          onChange={handleOnChangePaginaion}
           prev={DATA.prev}
           next={DATA.next}
         />
